@@ -25,6 +25,8 @@ end
 
 module Ruby::Przypadki
   def self.dopelniacz(word)
+    return "#{word[0...-1]}ego" if word.ends_with?('cy')
+
     return "#{word[0...-2]}ka" if word.ends_with?('ek')
 
     return "#{word[0...-2]}i" if word.ends_with?('ja')

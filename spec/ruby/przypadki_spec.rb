@@ -26,6 +26,7 @@ RSpec.describe Ruby::Przypadki do
     'Antoni' => 'Antoniego',
     'Bartłomiej' => 'Bartłomieja',
     'Ignacy' => 'Ignacego',
+    'Paweł' => 'Pawła',
   }.each do |input, output|
     it "calculates dopelniacz of #{input} (#{output})" do
       expect(Ruby::Przypadki.dopelniacz(input)).to eq(output)

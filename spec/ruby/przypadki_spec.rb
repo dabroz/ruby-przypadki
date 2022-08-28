@@ -5,7 +5,14 @@ RSpec.describe Ruby::Przypadki do
     expect(Ruby::Przypadki::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  {
+    'Tomasz' => 'Tomasza',
+    'Sandra' => 'Sandry',
+    'Grzegorz' => 'Grzegorza',
+    'Aneta' => 'Anety',
+  }.each do |input, output|
+    it "calculates dopelniacz of #{input} (#{output})" do
+      expect(Ruby::Przypadki.dopelniacz(input)).to eq(output)
+    end
   end
 end

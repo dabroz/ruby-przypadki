@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 RSpec.describe Ruby::Przypadki do
-  it "has a version number" do
-    expect(Ruby::Przypadki::VERSION).not_to be nil
+  it 'has a version number' do
+    expect(Ruby::Przypadki::VERSION).not_to be_nil
   end
 
   {

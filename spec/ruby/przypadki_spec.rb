@@ -20,6 +20,8 @@ RSpec.describe Ruby::Przypadki do
     'Aneta' => 'Anety',
     'Mieszko' => 'Mieszka',
     'Agnieszka' => 'Agnieszki',
+    'Oliwia' => 'Oliwii',
+    'Maja' => 'Mai',
   }.each do |input, output|
     it "calculates dopelniacz of #{input} (#{output})" do
       expect(Ruby::Przypadki.dopelniacz(input)).to eq(output)

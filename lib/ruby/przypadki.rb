@@ -25,13 +25,17 @@ end
 
 module Ruby::Przypadki
   def self.dopelniacz(word)
+    return "#{word[0...-2]}ka" if word.ends_with?('ek')
+
     return "#{word[0...-2]}i" if word.ends_with?('ja')
     return "#{word[0...-1]}i" if word.ends_with?('ia')
 
     return "#{word[0...-1]}i" if word.ends_with?('ka')
     return "#{word[0...-1]}a" if word.ends_with?('ko')
 
-    return "#{word[0...-1]}y" if word[-1] == 'a'
+    return "#{word}ego" if word.ends_with?('i')
+
+    return "#{word[0...-1]}y" if word.ends_with?('a')
 
     "#{word}a"
   end
